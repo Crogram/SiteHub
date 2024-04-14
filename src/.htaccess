@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.html index.php [L,NC]
+RewriteRule ^about.html about.php [L,NC]
+RewriteRule ^search.html search.php [L,NC]
+RewriteRule ^ranking.html ranking.php [L,NC]
+RewriteRule ^apply.html apply.php [L,NC]
+RewriteRule ^404.html 404.php [L,NC]
+RewriteRule ^category-([0-9]+).html category.php?id=$1 [L,NC]
+RewriteRule ^category-([a-zA-Z]+).html category.php?alias=$1 [L,NC]
+RewriteRule ^site-([0-9]+).html site.php?id=$1 [L,NC]
+RewriteRule ^article.html article.php [L,NC]
+RewriteRule ^article-list-([0-9]+).html article_list.php?id=$1 [L,NC]
+RewriteRule ^article-([0-9]+).html article_show.php?id=$1 [L,NC]
+RewriteRule ^img/favicon/(.*)$ favicon.php?url=$1 [L,NC]
+RewriteRule ^img/favicon/(.*)\.png$ favicon.php?url=$1 [L,NC]
+RewriteRule ^img/preview/(.*)\.png$ preview.php?url=$1 [L,NC]

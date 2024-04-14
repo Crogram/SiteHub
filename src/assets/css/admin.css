@@ -1,0 +1,92 @@
+body {
+    padding-top: 51px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.navbar-brand.logo {
+    width: 160px;
+    padding: 4px 15px;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+}
+
+.page-header {
+    margin-top: 20px;
+}
+
+.breadcrumb {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.page-wrapper {
+    margin-top: 20px;
+}
+
+.panel + .pagination {
+    margin-top: 0;
+}
+
+.login {
+    width: 420px;
+    background: #fff;
+    padding: 30px;
+    margin: 10% auto 5%;
+    box-shadow: 0 0 20px 2px #000;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    .login {
+        width: 75%;
+        max-width: 400px;
+        margin: 20% auto 5%;
+    }
+}
+
+.login-heading {
+    font-size: 28px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.login-body {
+    padding: 20px 0px;
+}
+
+.login-btn {
+    margin: 30px 10px 10px;
+}
+
+.head-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px #448aff;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+}
+
+.head-img:hover {
+    box-shadow: 0px 0px 6px #40c4ff;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+}
+
+.head-img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.footer {
+    background: #fff;
+    box-shadow: 0px -1px 10px #ddd;
+}
