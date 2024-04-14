@@ -195,7 +195,7 @@ IIS 伪静态规则
 
 ## 开源许可
 
-InPanel 采用 [BSD](./LICENSE) 许可发布。
+SiteHub 采用 [MIT](./LICENSE) 许可发布。
 
 ## 作者
 
