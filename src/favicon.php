@@ -40,6 +40,8 @@ $formatUrl = $favicon->formatUrl($url);
 
 if ($expire == 0) {
     $favicon->getFavicon($formatUrl, false);
+    @header("Cache-Control: public, max-age={$expire}");
+    @header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
     exit;
 } else {
     $defaultMD5 = md5(file_get_contents($defaultIco));
@@ -49,6 +51,10 @@ if ($expire == 0) {
         foreach ($favicon->getHeader() as $header) {
             @header($header);
         }
+        @header("Cache-Control: public, max-age={$expire}");
+        // 缓存文件的修改时间
+        $file = CACHE_ROOT . '/' . parse_url($formatUrl)['host'] . '.txt';
+        @header("Last-Modified: " . gmdate("D, d M Y H:i:s", filemtime($file)) . " GMT");
         echo $data;
         exit;
     }
@@ -67,6 +73,8 @@ if ($expire == 0) {
     foreach ($favicon->getHeader() as $header) {
         @header($header);
     }
+    @header("Cache-Control: public, max-age={$expire}");
+    @header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 
     echo $content;
     exit;

@@ -181,9 +181,9 @@ class Favicon
     public function getHeader()
     {
         return array(
-            // 'X-Robots-Tag: noindex, nofollow',
-            'Content-type: image/x-icon',
-            // 'Cache-Control: public, max-age=604800'
+            'X-Powered-By: IconHub',
+            'X-Robots-Tag: noindex, nofollow',
+            'Content-type: image/x-icon'
         );
     }
 
