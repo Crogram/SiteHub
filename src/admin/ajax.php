@@ -1,4 +1,4 @@
-<?php 
+<?php
 define('IN_ADMIN', true);
 include("../includes/common.php");
 if ($admin_islogin == 1) {
@@ -72,7 +72,7 @@ switch ($act) {
         // 修改账号和密码
         if (empty($_POST)) exit('{"code":-4,"msg":"操作有误"}');
         $admin_user = _post('admin_user', '');
-        $admin_pwd  = _post('admin_pwd', '');
+        $admin_pwd  = _post('admin_pwd', '') ? hash('sha256', _post('admin_pwd', '')) : '';
         $newpwd     = _post('newpwd', '');
         $newpwd2    = _post('newpwd2', '');
 
