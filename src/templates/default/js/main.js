@@ -112,7 +112,7 @@ window.onload = function () {
     $('.category .move').click(function (e) {
         e.preventDefault();
         let href = $(this).attr("href");
-        let pos = $(href).offset().top - offset;
+        let pos = $(document.getElementById(href.slice(1))).offset().top - offset;
         $("html,body").animate({
             scrollTop: pos
         }, 500);
@@ -196,7 +196,7 @@ function cateActive() {
         let href = $(this).attr('href');
         let scrollTop = $(window).scrollTop();
         let windowHeight = $(window).height();
-        let offsetTop = $(href).offset().top;
+        let offsetTop = $(document.getElementById(href.slice(1))).offset().top;
         if (offsetTop < (scrollTop + windowHeight) && offsetTop > scrollTop) {
             $(this).addClass('active');
             return false;
