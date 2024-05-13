@@ -5,8 +5,8 @@
 // error_reporting(-1);
 error_reporting(0);
 define('IN_CRONLITE', true);
-define('VERSION', '1001');
-define('APP_VERSION', '1.0.1');
+define('VERSION', '1002');
+define('APP_VERSION', '1.0.2');
 define('SYSTEM_ROOT', dirname(__FILE__));
 define('ROOT', dirname(SYSTEM_ROOT));
 // define('CC_Defender', 1);
