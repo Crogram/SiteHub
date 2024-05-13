@@ -87,6 +87,7 @@ switch ($act) {
             // 修改密码
             if (strlen($newpwd) < 6) exit('{"code":-1,"msg":"密码长度不能低于6个字符串！"}');
             if ($newpwd != $newpwd2) exit('{"code":-1,"msg":"两次新密码输入不一致"}');
+            $newpwd2 = hash('sha256', $newpwd2);
             saveSetting('admin_pwd', $newpwd2);
             $session = md5($admin_user . $newpwd2 . $password_hash);
         } else {
