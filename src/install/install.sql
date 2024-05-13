@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `pre_config` (
 
 INSERT INTO `pre_config` (`k`, `v`) VALUES
 ('admin_user', 'admin'),
-('admin_pwd', '123456'),
+('admin_pwd', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
 ('qq', '350430869'),
 ('email', 'jksdou@qq.com'),
 ('name', '程江网址导航系统'),

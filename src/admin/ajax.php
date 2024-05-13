@@ -1,4 +1,4 @@
-<?php 
+<?php
 define('IN_ADMIN', true);
 include("../includes/common.php");
 if ($admin_islogin == 1) {
@@ -72,7 +72,7 @@ switch ($act) {
         // 修改账号和密码
         if (empty($_POST)) exit('{"code":-4,"msg":"操作有误"}');
         $admin_user = _post('admin_user', '');
-        $admin_pwd  = _post('admin_pwd', '');
+        $admin_pwd  = _post('admin_pwd', '') ? hash('sha256', _post('admin_pwd', '')) : '';
         $newpwd     = _post('newpwd', '');
         $newpwd2    = _post('newpwd2', '');
 
@@ -87,6 +87,7 @@ switch ($act) {
             // 修改密码
             if (strlen($newpwd) < 6) exit('{"code":-1,"msg":"密码长度不能低于6个字符串！"}');
             if ($newpwd != $newpwd2) exit('{"code":-1,"msg":"两次新密码输入不一致"}');
+            $newpwd2 = hash('sha256', $newpwd2);
             saveSetting('admin_pwd', $newpwd2);
             $session = md5($admin_user . $newpwd2 . $password_hash);
         } else {

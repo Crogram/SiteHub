@@ -5,7 +5,7 @@ require('../includes/lang.class.php');
 $act = _get('act');
 if ($act == 'login') {
     $user     = _post('user');
-    $password = _post('password');
+    $password = _post('password') ? hash('sha256', _post('password')) : '';
     @header('Content-Type: application/json; charset=UTF-8');
     if (empty($user)) {
         exit('{"code":-1,"msg":"用户名不能为空！"}');
