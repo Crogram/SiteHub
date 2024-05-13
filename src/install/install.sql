@@ -32,7 +32,6 @@ INSERT INTO `pre_config` (`k`, `v`) VALUES
 ('keywords', '导航系统,网站导航,程江网址导航系统,分类目录'),
 ('description', '程江网址导航系统为您提供网站分类目录索引及网址大全库的建立，旨在为用户提供高效便捷的网址存储和查询服务，同时提供最全的优秀名站导航。'),
 ('icp', '沪ICP备20016252号'),
-('build_time', '2021-10-25'),
 ('script_header', '<!-- script_header -->'),
 ('script_footer', '<!-- script_footer -->'),
 ('info', '免责声明：程江网址导航系统所列站点收集于全球互联网，内容与本站无关'),
@@ -207,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `pre_article` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;</explode>
 
 INSERT INTO `pre_article` (`id`, `name`, `catename`, `introduce`, `hits_total`, `tui`, `time`) VALUES
-(1, '文章标题', '资源分享', '<p>文章详情信息</p>', 66, 1, '2021-10-25'),
+(1, '文章标题', '资源分享', '<p>文章详情信息</p>', 66, 1, '2021-10-25');</explode>
 
 CREATE TABLE IF NOT EXISTS `pre_like` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

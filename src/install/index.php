@@ -1,11 +1,14 @@
 <?php
+// ini_set('display_errors', 'On');
+// error_reporting(E_ALL);
+// error_reporting(-1);
 error_reporting(0);
 @header('Content-Type: text/html; charset=UTF-8');
 
 define('ROOT', dirname(dirname(__FILE__)));
 
 $step = isset($_GET['step']) ? $_GET['step'] : '0';
-
+$installed = false;
 if (file_exists(ROOT . '/install/install.lock')) {
     $installed = true;
     $step = '0';
@@ -193,7 +196,7 @@ $str_installed = '<div class="list-group">
                         </div>
                         <?php
                         require ROOT . '/install/db.class.php';
-                        if (defined("SAE_ACCESSKEY") || $_GET['jump'] == 1) {
+                        if (defined("SAE_ACCESSKEY") || (isset($_GET['jump']) && $_GET['jump'] == 1)) {
                             if (defined("SAE_ACCESSKEY")) {
                                 include_once ROOT . '/includes/sae.php';
                             } else {
@@ -213,7 +216,7 @@ $str_installed = '<div class="list-group">
                                         echo '<div class="alert alert-warning">连接数据库失败，[' . DB::connect_errno() . ']' . DB::connect_error() . '</div>';
                                 } else {
                                     echo '<div class="alert alert-success">数据库配置文件保存成功！</div>';
-                                    if (DB::query("select * from {$prefix}_config where 1") == FALSE) {
+                                    if (DB::query("select * from {$dbconfig['prefix']}_config where 1") == FALSE) {
                                         echo '<a class="btn btn-primary btn-block" href="?step=4">创建数据表>></a>';
                                     } else {
                                         echo $str_installed;
@@ -294,7 +297,7 @@ $str_installed = '<div class="list-group">
                             DB::query("set sql_mode = ''");
                             DB::query("set names utf8");
                             $sqls[] = "INSERT INTO `" . $dbconfig['prefix'] . "_config` VALUES ('sys_key', '" . random(32) . "')";
-                            $sqls[] = "INSERT INTO `" . $dbconfig['prefix'] . "_config` VALUES ('build_time', '" . $date("Y-m-d") . "')";
+                            $sqls[] = "INSERT INTO `" . $dbconfig['prefix'] . "_config` VALUES ('build_time', '" . $date . "')";
                             $t = 0;
                             $e = 0;
                             $error = '';
