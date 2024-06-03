@@ -335,7 +335,7 @@ $str_installed = '<div class="list-group">
                             </div>
                         </div>
                         <div class="alert alert-info">
-                            <p style="color: green;">安装完成！默认管理账号和密码是：admin/admin</p>
+                            <p style="color: green;">安装完成！默认管理账号和密码是：admin/123456</p>
                             <br /><br />
                             <a href="../" target="_blank">>>网站首页</a>｜<a href="../admin/" target="_blank">>>后台管理</a>
                             <hr />更多设置选项请登录后台管理进行修改。
