@@ -15,27 +15,32 @@ if (empty($row)) {
     exit('<script type="text/javascript">window.location.href="./notice.php";</script>');
 };
 ?>
-<ol class="breadcrumb">
-    <li><a href="./"><?php echo $lang->admin->index; ?></a></li>
-    <li><a href="notice.php"><?php echo $lang->admin->notice_list; ?></a></li>
-    <li class="active"><?php echo $lang->admin->notice_edit; ?></li>
-</ol>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <b><?php echo $lang->admin->notice_edit; ?></b>
-        <span>（温馨提示：网站前台只会显示最新的一条公告）</span>
-    </div>
-    <div class="panel-body">
-        <form action="notice_ajax.php?act=edit" method="post">
-            <input type="text" value="<?php echo $id; ?>" name="id" style="display: none;">
-            <div class="input-group">
-                <span class="input-group-addon">内容</span>
-                <textarea rows="5" class="form-control" placeholder="请输入公告内容[必填]" name="content" required><?php echo $row['content']; ?></textarea>
+<div class="content-wrapper">
+    <section class="content-header"><ol class="breadcrumb">
+            <li><a href="./"><?php echo $lang->admin->index; ?></a></li>
+            <li><a href="notice.php"><?php echo $lang->admin->notice_list; ?></a></li>
+            <li class="active"><?php echo $lang->admin->notice_edit; ?></li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b><?php echo $lang->admin->notice_edit; ?></b>
+                <span>（温馨提示：网站前台只会显示最新的一条公告）</span>
             </div>
-            <hr />
-            <input type="submit" class="btn btn-info btn-block" value="修改">
-        </form>
-    </div>
+            <div class="panel-body">
+                <form action="notice_ajax.php?act=edit" method="post">
+                    <input type="text" value="<?php echo $id; ?>" name="id" style="display: none;">
+                    <div class="input-group">
+                        <span class="input-group-addon">内容</span>
+                        <textarea rows="5" class="form-control" placeholder="请输入公告内容[必填]" name="content" required><?php echo $row['content']; ?></textarea>
+                    </div>
+                    <hr />
+                    <input type="submit" class="btn btn-info btn-block" value="修改">
+                </form>
+            </div>
+        </div>
+    </section>
 </div>
 
 <?php

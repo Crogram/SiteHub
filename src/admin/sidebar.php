@@ -32,7 +32,7 @@
         </div>
         <div class="panel panel-default sidebar-footer">
             <div class="list-group">
-                <div class="list-group-item text-center bg-success"><?php echo $lang->app->name; ?> v<?php echo APP_VERSION; ?></div>
+                <div class="list-group-item text-center bg-success"><a target="_blank" href="http://sitehub.dzid.cn"><?php echo $lang->app->name; ?> v<?php echo APP_VERSION; ?></a></div>
             </div>
         </div>
     </div>

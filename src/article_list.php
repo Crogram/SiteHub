@@ -25,7 +25,7 @@ $article_list = $DB->findAll('article', 'id,name,time', array('catename' => $art
     <meta name="keywords" content="<?php echo $conf['keywords']; ?>">
     <meta name="description" content="<?php echo $conf['description']; ?>">
     <link rel="shortcut icon" type="images/x-icon" href="./favicon.ico" />
-    <link href="./assets/fontawesome/4.7.0/css/fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/ozui.min.css" />
     <link rel="stylesheet" type="text/css" href="./templates/default/css/style.css" />
     <?php echo $conf['script_header']; ?>

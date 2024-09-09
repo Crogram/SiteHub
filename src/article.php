@@ -25,7 +25,7 @@ $row_article_suggest = $DB->findAll('article', '*', 'tui=1', 'time desc', 4);
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title><?php echo $page_title; ?></title>
     <link rel="shortcut icon" type="images/x-icon" href="./favicon.ico" />
-    <link href="./assets/fontawesome/4.7.0/css/fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/ozui.min.css" />
     <link rel="stylesheet" type="text/css" href="./templates/default/css/style.css" />
     <?php echo $conf['script_header']; ?>

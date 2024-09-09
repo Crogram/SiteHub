@@ -35,7 +35,7 @@ $page_title = $article_item['name'] . '-' . $conf['title'];
     <meta name="keywords" content="<?php echo $conf['keywords']; ?>">
     <meta name="description" content="<?php echo $conf['description']; ?>">
     <link rel="shortcut icon" type="images/x-icon" href="./favicon.ico" />
-    <link href="./assets/fontawesome/4.7.0/css/fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/ozui.min.css" />
     <link rel="stylesheet" type="text/css" href="./templates/default/css/style.css" />
     <?php echo $conf['script_header']; ?>
@@ -61,7 +61,7 @@ $page_title = $article_item['name'] . '-' . $conf['title'];
                     <em><?php echo $article_item['time']; ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $conf['name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;已浏览<?php echo $article_item['hits_total']; ?>次</em>
                 </div>
                 <br /><br />
-                <?php echo $article_item['introduce']; ?>
+                <?php echo htmlspecialchars_decode($article_item['introduce']); ?>
                 <br /><br />
             </div>
         </div>

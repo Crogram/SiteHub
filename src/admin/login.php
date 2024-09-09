@@ -35,10 +35,10 @@ if ($act == 'login') {
 <head>
     <title><?php echo $lang->admin->login; ?> - <?php echo $lang->admin->title; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" href="../favicon.ico" />
-    <link rel="stylesheet" href="../assets/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/admin.css" />
     <style>
         /* body {

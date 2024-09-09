@@ -8,14 +8,16 @@ if ($admin_islogin != 1) {
 
 <head>
     <title><?php echo $title; ?> - <?php echo $lang->admin->title; ?></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0" />
     <link rel="shortcut icon" href="../favicon.ico" />
-    <link href="<?php echo $site_cdnpublic; ?>twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="<?php echo $site_cdnpublic; ?>fontawesome/4.7.0/css/fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>admin-lte/2.4.2/css/AdminLTE.min.css"> -->
+    <!-- <link rel="stylesheet" href="<?php echo $site_cdnpublic; ?>admin-lte/2.4.2/css/skins/_all-skins.min.css"> -->
     <link rel="stylesheet" type="text/css" href="../assets/css/admin.css" />
 </head>
 
-<body>
-
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
