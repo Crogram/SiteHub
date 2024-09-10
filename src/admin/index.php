@@ -125,7 +125,7 @@ $checkupdate = '//auth.u-id.cn/app/php-app-domain.php?ver=' . VERSION;
                 <table class="table table-bordered table-striped">
                     <tbody>
                         <tr>
-                            <th>系统程序</th>
+                            <th>程序名称</th>
                             <td><?php echo $lang->app->name; ?></td>
                             <th>程序版本</th>
                             <td>v<?php echo APP_VERSION; ?> <button class="btn btn-success btn-xs" onclick="appCheckUpdate();">检查更新</button></td>
@@ -151,9 +151,17 @@ $checkupdate = '//auth.u-id.cn/app/php-app-domain.php?ver=' . VERSION;
                         <tr>
                             <th>程序最大运行时间</th>
                             <td><?php echo ini_get('max_execution_time') ?>s</td>
-                            <th>网站路径</th>
+                            <th>程序安装路径</th>
                             <td><?php echo ROOT; ?>/</td>
                         </tr>
+                        <?php if (isset($app_config['subpath']) && !empty($app_config['subpath'])) { ?>
+                        <tr>
+                            <th>程序安装在主站子目录</th>
+                            <td>是</td>
+                            <th>子目录位置</th>
+                            <td><?php echo $app_config['subpath']; ?></td>
+                        </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -176,10 +184,7 @@ $checkupdate = '//auth.u-id.cn/app/php-app-domain.php?ver=' . VERSION;
                             <th>联系QQ</th><td>350430869</td>
                         </tr>
                         <tr>
-                            <th>Copyright</th>
-                            <td colspan="3">
-                                <strong>Copyright &copy; <?php echo date('Y'); ?> <a target="_blank" href="https://crogram.org">CROGRAM</a>.</strong> All Rights Reserved. 
-                            </td>
+                            <td colspan="4">Copyright &copy; <?php echo date('Y');?> <?php echo $lang->app->name; ?>. All Rights Reserved.</td>
                         </tr>
                     </tbody>
                 </table>

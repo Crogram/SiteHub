@@ -1,4 +1,9 @@
 <?php
+// 程序配置
+$app_config = array(
+    'subpath' => ''
+);
+
 /* 数据库配置 */
 $dbconfig = array(
     'host'   => '127.0.0.1', // 数据库服务器
